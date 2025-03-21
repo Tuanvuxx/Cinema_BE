@@ -130,7 +130,9 @@ const Showtime = () => {
             </div>
           ))
         ) : (
-          <p className="text-white mt-4">Không có lịch chiếu cho ngày này.</p>
+          <p className="text-gray-500 mt-2">
+            Ngày bạn chọn hiện không có lịch chiếu nào. Vui lòng chọn ngày khác.
+          </p>
         )}
       </div>
     </div>
