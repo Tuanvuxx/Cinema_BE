@@ -48,3 +48,16 @@ export const getShowTimes = async () => {
   const response = await api.get("/showtime");
   return response.data;
 };
+
+const BASE_URL = "http://localhost:8080";
+
+// Lấy danh mục phim
+export const fetchCategories = async () => {
+  try {
+    const response = await axios.get(`${BASE_URL}/categories`);
+    return response.data;
+  } catch (error) {
+    console.error("Lỗi lấy danh mục phim:", error);
+    return [];
+  }
+};
