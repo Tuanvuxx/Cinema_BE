@@ -6,7 +6,6 @@ import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import Payment from "./components/Payment";
 import SeatSelection from "./components/SeatSelection";
-import MovieSlider from "./components/MovieSlider";
 import MovieDetail from "./components/MovieDetail";
 import UserRoutes from "./routes/UserRoutes";
 // import PrivateRoute from "./routes/PrivateRoute";
@@ -27,7 +26,6 @@ export default function App() {
         <Route path="/movie-detail" element={<MovieDetail />} />
         {/* Routes cho user */}
         <Route path="/*" element={<UserRoutes />} />
-
         {/* Routes cho admin - yêu cầu quyền admin */}
         <Route path="/admin/*" element={<AdminRoutes />} />
       </Routes>

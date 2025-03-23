@@ -5,14 +5,6 @@ import {
   uploadVideoToCloudinary,
 } from "../services/cloudinary";
 import { addMovie, getCategories } from "@/services/api.jsx";
-import axios from "axios";
-import { useForm } from "react-hook-form";
-import { useState, useEffect } from "react";
-import {
-  uploadImageToCloudinary,
-  uploadVideoToCloudinary,
-} from "../services/cloudinary";
-import { addMovie } from "@/services/api.jsx";
 
 export default function AddMovieForm() {
   const { register, handleSubmit, reset, setValue } = useForm();
@@ -20,19 +12,6 @@ export default function AddMovieForm() {
   const [uploading, setUploading] = useState(false);
   const [videoPreview, setVideoPreview] = useState("");
   const [categories, setCategories] = useState([]);
-
-  // Fetch danh sách thể loại từ API
-  useEffect(() => {
-    const fetchCategories = async () => {
-      try {
-        const response = await axios.get("http://localhost:8080/categories");
-        setCategories(response.data);
-      } catch (error) {
-        console.error("Lỗi lấy danh sách thể loại:", error);
-      }
-    };
-    fetchCategories();
-  }, []);
 
   useEffect(() => {
     getCategories();
