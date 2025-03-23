@@ -3,6 +3,11 @@ import PublicRoute from "./routes/PublicRoute";
 // import PrivateRoute from "./routes/PrivateRoute";
 import AdminRoutes from "./routes/AdminRoutes";
 import HomePage from "./pages/HomePage";
+import Register from "./pages/Register";
+import Payment from "./components/Payment";
+import SeatSelection from "./components/SeatSelection";
+import MovieSlider from "./components/MovieSlider";
+import MovieDetail from "./components/MovieDetail";
 
 export default function App() {
   return (
@@ -13,6 +18,10 @@ export default function App() {
         {/* Routes cho admin - yêu cầu quyền admin */}
         <Route path="/admin/*" element={<AdminRoutes />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/payment" element={<Payment />} />
+        <Route path="/seat-selection" element={<SeatSelection />} />
+        <Route path="/movie-detail" element={<MovieDetail />} />
       </Routes>
     </Router>
   );
