@@ -43,3 +43,8 @@ export const login = async ({ username, password }) => {
   });
   return response.data;
 };
+
+export const getShowTimes = async () => {
+  const response = await api.get("/showtime");
+  return response.data;
+};
